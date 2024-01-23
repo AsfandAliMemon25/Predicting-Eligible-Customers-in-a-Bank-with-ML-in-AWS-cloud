@@ -1,30 +1,43 @@
-# Predicting-Eligible-Customers-in-a-Bank-with-ML-in-AWS-cloud
-Web Implementation for Predicting Eligible Customers Using ML
-Every day, a large number of people seek for loans for a variety of reasons. But not everyone will be accepted, and not every candidate is reliable. Sometimes, debtors don't pay back the bank the majority of their loans, which results in significant losses. Choosing to grant a loan involves a great deal of risk. Thus, the project's objective is to estimate whether or not a customer will be able to repay the loan by using machine learning algorithms on this data to extract important information. Thus, the goal is to ascertain whether or not you can anticipate the consumer defaulting.
+# Project for the laboratory of Advanced Programming
+# Web Implemenatation for the bank to predict eligible customers using Machine Learning and AWS.
 
-The bank's goal is to use the consumer information they submit on the online application form to automate the loan eligibility process in real time. These include information about the borrower's gender, credit history, number of dependents, marriage, education, and income.
+For a wide range of reasons, many individuals apply for loans every day. However, not all candidates are trustworthy, and not everyone will be accepted. There are instances where borrowers fail to repay the majority of their loans to the bank, which causes enormous financial losses. Choosing to approve a loan carries a significant amount of danger. Therefore, the goal of this project is to use machine learning techniques on this data to extract key information, and then forecast whether or not a customer will be able to repay the loan. Therefore, the objective is to determine whether you can predict the customer defaulting or not.
 
-The following file contains the dataset that was downloaded from Kaggle: https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset.
+Bank wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others.
 
-dataset (dataset.csv)
-WebImplementationproject.ipynb (model construction and EDA in a notebook file)
-modeltrain.py is a Python file used to create models.
-Pickle file containing the model, MLmodels.pkl
-webapp.py, a Python file used to deploy models
-templates/index.html (frontend HTML file)
-output/(folder containing all web and AWS implementation output images)
+Dataset was downloaded from Kaggle - https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset
+Files :
+- dataset.csv (dataset) 
+- WebImplementationproject.ipynb (notebook file with EDA, model building)
+- modeltrain.py (python file for model building)
+- MLmodels.pkl (pickle file consisting the model)
+- webapp.py (python file for model deployment)
+- templates/index.html (html file for frontend)
+- output/( folder with all output images of web and AWS implementation)
 
-We attempted to develop a model using Gradient Boosting, Decision Trees, Logistic Regression, and K Nearest Neighbors. We also attempted to use hyperparameter optimization to determine the optimal outcome. When we used GridSearchCV to apply gradient boosting, we obtained the best results in terms of recall and F1 score (recall = 0.53, f1-score = 0.60). Thus, we proceeded with developing this model-building technique.
+Algorithms :
 
-Installation on Amazon EC2
-created a PEM file after creating an instance.
-used Ubuntu to push code to an AWS server.
-Added source 0.0.0.0/0 in EC2 on port 5000.
-accessed the server and executed a Python file.
-To work on the model, open a browser and run the following link: http://ec2-3-142-219-86.us-east-2.compute.amazonaws.com:5000/.
-Steps Complicated:
+We tried to perform model building using K Nearest Neighbors, Decision Tree, Logistic Regression, Gradient Boosting. Also we tried to find out the best result by hyper parameter tuning. We got the best Recall and F1 score when we applied **Gradient Boosting** with GridSearchCV (recall = 0.53, f1-score = 0.60). So we went ahead with this algorithm for model building.
 
-Comprehending and Cleaning Data
-Investigative Study
-Model Building, User Interface Building, Encoding, Feature Selection, and Scaling
-Results: UI was  built and we need to put in details of the customer whose loan eligibility we would like to predict.
+Deployment on AWS EC2
+-
+- Created an instance, then generated PEM file.
+- Pushed code to AWS server using Ubuntu.
+- Added source 0.0.0.0/0 with port 5000 in EC2.
+- Connected to server and run python file.
+- Ran the link on browser (http://ec2-3-142-219-86.us-east-2.compute.amazonaws.com:5000/) to work on the model.
+
+Steps Involved : 
+- Understanding Data
+- Data Cleaning
+- Exploratory Analysis
+- Feature Engineering
+- Encoding
+- Feature Selection & Scaling
+- Model Building
+- UI Building
+- Deployment
+
+Output : 
+UI was built and we will have to put in details of the customer whose loan eligibility we would like to predict.
+
